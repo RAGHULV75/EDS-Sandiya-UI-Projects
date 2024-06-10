@@ -1,0 +1,27 @@
+<h1>{{ title }}</h1>
+<p>Age: {{ age }}</p>
+<p>Is Student: {{ isStudent }}</p>
+<p> {{marray}} </p>
+
+<h2>Hobbies</h2>
+<ul>
+  <li *ngFor="let hobby of hobbies">{{ hobby }}</li>
+</ul>
+
+<h2>Person Tuple</h2>
+<p>ID: {{ person[0] }}</p>
+<p>Name: {{ person[1] }}</p>
+<p>Is Active: {{ person[2] }}</p>
+<p>{{many}}</p>
+<p>{{list}}</p>
+<div>
+  <h2>My Component</h2>
+  <p>Name: {{ myDictionary['name1'] }}</p>
+  
+</div>
+
+
+
+
+
+

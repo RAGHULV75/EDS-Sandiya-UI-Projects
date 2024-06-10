@@ -1,0 +1,23 @@
+
+
+  
+  <form [formGroup]="profileForm" >
+  <mat-form-field appearance="fill">
+    <mat-label>Student Name</mat-label> 
+
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+<br>
+  <mat-form-field appearance="fill">
+    <mat-label>Register No</mat-label>
+    <input matInput formControlName="registerno">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</form>
+
+
+
+

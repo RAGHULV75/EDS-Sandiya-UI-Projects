@@ -1,0 +1,231 @@
+<div class="body" >
+ 
+  <section class="menu">
+    <div class="nav">
+      <div class="logo"><h1>Food<b>io</b></h1>
+
+      </div>
+      <ul>
+        <li><a  class="active"  href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+      <div ng>
+        
+        <!-- <a  href="#"  class="singin" type="submit" name="singin" > Sign in</a> -->
+        <button  mat-raised-button (click)="switchView('login')" class="singup" type="submit" name="singup" >Sign In</button>
+
+      
+      </div>
+
+    </div>
+    
+
+  </section><br>
+  <br>
+  <div *ngIf="mShowForm">
+  <section>
+    <div class="grid">
+      <div class="content">
+        <div class="content-left">
+          <div class="info">
+             <h2>Order Your best <br>Food Anytime</h2>
+             <p>Hey, Our delicious food is waiting for you,<br>
+              We are always near to you with fresh item of food
+            </p>
+          </div>
+          <button mat-button >Explore Food</button>
+        
+        </div>
+        <div class="content-right">
+          <img src="/assets/image/images/f24.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section><br>
+  <br>
+
+
+  <section class="category">
+    <div class ="list-items">
+      <h3> Popular Dishes</h3>
+      <br>
+      <div class="card-list">
+        <div class="card">
+        <img src="/assets/image/images/f19.jpg" alt="">
+        <div class="food-title">
+          <h1>Mattan Fry</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span>RS.300</span>
+          <span></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/image/images/f14.jpg" alt="">
+        <div class="food-title">
+          <h1>Chicken Tandoori</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span> RS. 200.00 </span>
+          <span></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/image/images/f24.jpg" alt="">
+        <div class="food-title">
+          <h1>Pizza</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span>RS.300.00</span>
+          <span></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/image/images/f22.jpg" alt="">
+        <div class="food-title">
+          <h1>Chicken Fry</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span>RS.200</span>
+          <span></span>
+        </div>
+        
+      
+
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="category">
+    <div class ="list-items">
+    
+      <br>
+      <div class="card-list">
+        <div class="card">
+        <img src="/assets/image/images/f19.jpg" alt="">
+        <div class="food-title">
+          <h1> Veg friedraise</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span>RS.400</span>
+          <span></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/image/images/f14.jpg" alt="">
+        <div class="food-title">
+          <h1>Chicken Tandoori</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span> RS. 200.00 </span>
+          <span></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/image/images/f24.jpg" alt="">
+        <div class="food-title">
+          <h1>Pizza</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span>RS.300.00</span>
+          <span></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/image/images/f22.jpg" alt="">
+        <div class="food-title">
+          <h1>Chicken Noodles</h1>
+
+        </div>
+        <div class="desc-food">
+          <p>Quaerat justo digniss corporis cupid itate pares</p>
+        </div>
+        <div class="price">
+          <span>$10.99</span>
+          <span></span>
+        </div>
+        
+      
+
+      </div>
+    </div>
+  </div>
+  </section>
+  <section>
+    <div class="footer"><br><br>
+      <div class="contact">
+        
+        <div class="address">
+          <i class="fa-solid fa-location-dot"></i>
+          
+          <h2>Address</h2>
+          <p>1524 ,Avinasi Road<br>
+            Hopes College,
+            Peelamedu ,<br>
+            coimbatore-641 033
+          </p>
+        </div>
+        <div class="address">
+          <i class="fa-solid fa-phone"></i>
+          <h2>Phone</h2>n
+          <p>+91 9514827734</p>
+          <p>+91 9614827734</p>
+          <p>+91 9614827734</p>
+
+
+        </div>
+        <div class="address">
+          
+          <i class="fa-solid fa-envelope"></i>
+          <h2>Email</h2>
+          <p>foodie@gmail.com</p>
+          <p>foodieorder@gmail.com</p>
+          <p>foodieorder@gmail.com</p>
+
+
+        </div>
+         
+          </div></div>
+  </section>
+
+</div>
+
+      <div *ngIf="!mShowForm">
+        <app-form></app-form>
+      </div>
+  
+  </div>
+<!-- <</body>
+
+</html>> -->

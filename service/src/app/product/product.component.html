@@ -1,0 +1,145 @@
+
+  <mat-tab-group>
+    <mat-tab label="First"> 
+   
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar> 
+
+<div>
+  <button mat-flat-button color="primary" (click)=" getAllProducts()" >Show All Products</button>
+  
+  <div *ngFor="let product of products" class="product">
+     <strong>{{ product.Name }}</strong> (Code: {{ product.Code }})<br>
+    Quantity: {{ product.Qty }} - Price: ${{ product.Price.toFixed(2) }} 
+
+  
+  <button  mat-flat-button color="primary" (click)="removeProduct(product.Name)">Remove</button>
+   
+    
+  
+  </div>
+  
+<h3>Add a New Product</h3>
+<form (ngSubmit)="addProduct()" class="form">
+  <mat-form-field>
+    <mat-label>Input</mat-label>
+    <input matInput type="text" [(ngModel)]="newProduct.Name" name="name" required>
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>
+    Code:
+    </mat-label>
+    <input matInput type="text" [(ngModel)]="newProduct.Code" name="code" required>
+   </mat-form-field><br>
+
+   <mat-form-field>
+  <mat-label>
+    Quantity:
+  </mat-label>
+    <input  matInput type="number" [(ngModel)]="newProduct.Qty" name="qty" required>
+ </mat-form-field><br>
+ <mat-form-field>
+  <mat-label>
+    Price:
+    <input  matInput type="number" [(ngModel)]="newProduct.Price" name="price" step="0.01" required>
+  </mat-label>
+  </mat-form-field><br>
+  <button   mat-flat-button color="primary" type="submit">Add Product</button>
+</form>
+</div>
+<div>
+  <h2>Item Filter</h2>
+  <input #searchInput type="text" placeholder="Enter search term" (input)="filterItems(searchInput.value)" />
+  <ul>
+    <li *ngFor="let item of filteredItems">{{ item }}</li>
+  </ul>
+</div>
+
+</mat-tab>
+<mat-tab label="Second">
+
+  <mat-horizontal-stepper [linear]="true">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill the Name</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Your Name" formControlName="firstControl">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill the order is conform</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="your order is conform" formControlName="secondControl">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>your order is conform</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</mat-tab>
+<mat-tab label="Third"> 
+
+  <mat-chip-list>
+    <button mat-flat-button color="primary" (click)=" getAllProducts()" >Show All Products</button>
+    <mat-chip *ngFor="let product of products"   (removed)="removeProduct1(product)">
+      {{ product.Name }} ({{ product.Code }}) - Qty: {{ product.Qty }} - ${{ product.Price }}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip>
+  </mat-chip-list>
+
+</mat-tab>
+</mat-tab-group>
+<!-- <div>
+  <button mat-flat-button color="primary" (click)=" getAllProducts()" >Show All Products</button>
+  
+  <div *ngFor="let product of products" class="product">
+     <strong>{{ product.Name }}</strong> (Code: {{ product.Code }})<br>
+    Quantity: {{ product.Qty }} - Price: ${{ product.Price.toFixed(2) }} 
+
+  
+  <button  mat-flat-button color="primary" (click)="removeProduct(product.Name)">Remove</button>
+   
+ 
+  
+  </div> -->
+
+
+<!-- <mat-paginator
+[length]="50"
+[pageSize]="pageSize"
+[pageSizeOptions]="pageSizeOptions"
+(page)="handlePageEvent($event)"
+showFirstLastButtons>
+</mat-paginator> -->
+
+
+
+
+

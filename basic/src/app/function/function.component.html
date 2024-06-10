@@ -1,0 +1,21 @@
+<div>
+  
+  <p >{{ message1 }}</p>
+  <button (click)="message()">click</button>
+  <h4>function with parameter</h4>
+  <p>Output: {{ addf(3, 5) }}</p>
+  <h4>arrow function without parameter</h4>
+  <p>arrow:{{ greet() }}</p>
+  
+  <p>Output: {{ multiplynum(3, 5) }}</p>
+  <p>optional:{{ greet() }}</p>
+
+
+</div>
+
+<div>
+  <h4>Optional parameter</h4>
+  <button (click)="optional('Alice')">Say Hello to Alice</button>
+  <button (click)="optional()">Say Hello to the World</button>
+  <p>{{optionalm}}</p>
+</div>

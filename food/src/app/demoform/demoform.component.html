@@ -1,0 +1,44 @@
+<div fxFlex="100%" fxLayout="column" style="height: 100%;"></div>
+<div class="form" fxFlex="20%">
+  <div   [formGroup]="profileForm">
+    <div class="formwidth">      Sign In    </div>
+  <br><br>
+    <mat-form-field appearance="fill" class="formwidth">
+      <mat-label> User Name</mat-label> 
+  
+      <input matInput formControlName="name">
+    </mat-form-field>
+  
+  <br>
+    <mat-form-field appearance="fill" class="formwidth">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="department">
+    </mat-form-field>
+  
+    <br>
+  
+ 
+    <br><br>
+    <button mat-raised-button style="background-color: blue;" (click)="onSubmit()"  >
+     <span style="color: whitesmoke;">
+      Submit
+     </span> 
+    </button>
+  
+  <br>
+</div>
+
+  
+  <div *ngIf="ShowTable == true">
+  <div class="formwidth">
+    <p>Sign In Successfully</p>
+  <p> User Name      :  {{aobject.name}}</p>
+  <!-- <p>registerno:{{aobject.registerno}}</p> -->
+  <p>Password:{{aobject.department}}</p> 
+  
+  </div>
+    <!-- <app-table ></app-table> -->
+  </div>
+  
+  
+  

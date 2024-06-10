@@ -1,0 +1,35 @@
+<div>
+  <h2>Animal Information</h2>
+  <p>{{ dog.displayInfo() }}</p>
+</div>
+
+
+<div>
+  <p>{{ myMethod() }}</p>
+  <button (click)="onButtonClick()">Click Me</button>
+</div>
+
+<div>
+  <p>{{ myNamedFunction() }}</p>
+  <button (click)="showAlert()">name</button>
+</div>
+
+<div>
+  <h2>Item Filter</h2>
+  <input #searchInput type="text" placeholder="Enter search term" (input)="filterItems(searchInput.value)" />
+  <ul>
+    <li *ngFor="let item of filteredItems">{{ item }}</li>
+  </ul>
+</div>
+
+<div>
+  <h2>Item Reverser</h2>
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+  <button (click)="updateReversedItems()">Reverse Items</button>
+  <h3>Reversed Items</h3>
+  <ul>
+    <li *ngFor="let item of reversedItems">{{ item }}</li>
+  </ul>
+</div>

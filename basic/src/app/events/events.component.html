@@ -1,0 +1,47 @@
+<h2>call function with event</h2>
+<h3>button click event</h3>
+
+<div>
+  <button mat-button (click)="onButtonClick()">Click me</button>
+</div>
+<div *ngIf="message">
+  <p>{{ message }}</p>
+</div>
+
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label for="name">Name:</mat-label>
+  <input mat-input (input)="onInputChange($event)" placeholder="Type something" />
+  <div *ngIf="inputmessage">
+    <p>{{ inputmessage }}</p>
+  </div>
+
+</mat-form-field>
+</div>
+
+<div><mat-form-field appearance="fill">
+  <form (ngSubmit)="onFormSubmit()">
+    <mat-label for="name">Name:</mat-label>
+    <input mat-input id="name" name="name" [(ngModel)]="name" required>
+    <button mat-button type="submit">Submit</button>
+  </form>
+  <div *ngIf="submitmessag">
+    <p>{{ submitmessag }}</p>
+  </div>
+</mat-form-field>
+</div>
+
+<div>
+  <p>{{ message }}</p>
+</div>
+
+<div>
+  <input 
+    (keydown)="onKeydown($event)" 
+    (keyup)="onKeyup($event)" 
+    (keypress)="onKeypress($event)" 
+    placeholder="Type something">
+</div>
+<div *ngIf="message1">
+ <p> key: {{ message1 }}</p>
+</div>

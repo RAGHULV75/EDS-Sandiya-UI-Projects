@@ -1,0 +1,65 @@
+<h3>STUDENT ATTENDANCE DATA FORM</h3><br>
+<form [formGroup]="profileForm" >
+  <mat-form-field appearance="fill">
+    <mat-label>Student Name</mat-label> 
+
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+<br>
+  <mat-form-field appearance="fill">
+    <mat-label>Register No</mat-label>
+    <input matInput formControlName="registerno">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Department</mat-label>
+    <input matInput formControlName="department">
+  </mat-form-field><br>
+ 
+
+  <mat-radio-group aria-label="Select an option" formControlName="attendance">
+    <mat-label>Attendance:</mat-label>
+    <mat-radio-button value="Present">Present</mat-radio-button>
+    <mat-radio-button value="Absent">Absent</mat-radio-button>
+  </mat-radio-group>
+  <section class="example-section">
+    <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+    <mat-checkbox class="example-margin" ShowTable="true">Disabled</mat-checkbox>
+  </section>
+  
+<br><br>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</form>
+<br>
+
+
+<div *ngIf="ShowTable == true">
+  <p>the gender is female</p>
+<p>Name      :  {{aobject.name}}</p>
+<p>registerno:{{aobject.registerno}}</p>
+<p>department:{{aobject.department}}</p> 
+<p>attendance:{{aobject.attendance}}</p>
+
+  <app-table ></app-table>
+</div>
+<form [formGroup]="profileForm" >
+  <mat-form-field appearance="fill">
+    <mat-label>Student Name</mat-label> 
+
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+<br>
+  <mat-form-field appearance="fill">
+    <mat-label>Register No</mat-label>
+    <input matInput formControlName="registerno">
+  </mat-form-field>
+
+  <br>
+  <br><br>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</form>
+<br>

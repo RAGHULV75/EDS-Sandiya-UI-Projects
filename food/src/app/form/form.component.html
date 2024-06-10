@@ -1,0 +1,95 @@
+
+<div fxFlex="100%" fxLayout="row" style="height: 100%;  background-color: sandybrown">
+  <div  fxFlex="30%">
+    1
+  </div>
+
+
+  <div  fxFlex="40%">
+    <div fxLayoutAlign="center center">
+      <div class="form">
+  <div class="example-container">
+    <div   [formGroup]="profileForm">
+  <div class="formwidth"> Sign In </div>
+<br><br>
+  <mat-form-field appearance="fill" class="formwidth">
+    <mat-label> User Name</mat-label> 
+
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+<br>
+  <mat-form-field appearance="fill" class="formwidth">
+    <mat-label>Age</mat-label>
+    <input matInput formControlName="age">
+  </mat-form-field>
+
+  <br>
+  <mat-card>
+    <mat-card-content>
+      <h2 class="example-h2">Other details</h2>
+  
+      <section class="example-section">
+        <mat-checkbox class="example-margin" formControlName="subscribe" >i am sigin</mat-checkbox>
+       
+      </section>
+  
+      <section class="example-section">
+        <label class="example-margin">Align:</label>
+        <mat-radio-group [(ngModel)]="labelPosition" formControlName="gender">
+          <mat-radio-button class="example-margin"  value="male">Male</mat-radio-button>
+          <mat-radio-button class="example-margin"  value="female">Female</mat-radio-button>
+        </mat-radio-group>
+      </section>
+      <mat-form-field appearance="fill">
+        <mat-label>Country</mat-label>
+        <mat-select formControlName="country" ngModel>
+          <mat-option value="us">United States</mat-option>
+          <mat-option value="uk">United Kingdom</mat-option>
+          <mat-option value="canada">Canada</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+  
+
+</div>
+  <br><br>
+  <button mat-raised-button style="background-color: blue;" (click)="onSubmit()"  >
+   <span style="color: whitesmoke;">
+    Submit
+   </span> 
+  </button>
+
+<br>
+    
+    
+  
+      
+    
+  
+  <div *ngIf="ShowTable == true">
+    <div class="formwidth">
+      <p>Sign In Successfully</p>
+    <p> User Name      :  {{aobject.name}}</p>
+     <p>Age:{{aobject.age}}</p> 
+     <p>signin:{{aobject.subscribe}}</p> 
+     
+     <p>Select the gender:{{aobject.gender}}</p>
+     <p>Country:{{aobject.country}}</p>
+  <!-- <ul>
+    <li *ngIf="isMaleChecked">Male</li>
+    <li *ngIf="isFemaleChecked">Female</li>
+  </ul> -->
+    
+    </div> 
+    </div>
+   
+  
+
+  </div>
+  <div  fxFlex="30%">
+    
+  </div>
+
+</div>

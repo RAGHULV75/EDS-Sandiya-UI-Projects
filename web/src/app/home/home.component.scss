@@ -1,0 +1,28 @@
+ul{  
+    
+     display:flex;
+     justify-self: center;
+     align-items: center;
+     flex-wrap: wrap;
+     list-style-type: none;
+     padding: 0;
+     background:rgb(250, 223, 150);
+}
+  ul li a{
+     height:18rem ;
+     width: 15rem;
+     border: 1px solid whitesmoke;
+     border-radius: 1rem;
+     margin: 0.5rem;
+     display: flex;
+     flex-direction: column;
+     overflow: hidden;
+     color: red;
+     background-color: white;
+     
+ } 
+ li a:hover{
+     opacity: 0.3;
+     cursor: pointer;
+     
+ }
